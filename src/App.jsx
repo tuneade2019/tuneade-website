@@ -148,7 +148,7 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-6">
             {/* 1. Profile (Google Drive) */}
             <a 
-              href="https://drive.google.com/..." 
+              href="https://drive.google.com/file/d/1RHlax0x-DnyY7_qYAYyGYpnCQJyxcxCB/view?usp=drivesdk" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group p-8 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-indigo-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(99,102,241,0.1)] flex items-start space-x-6"
@@ -169,7 +169,7 @@ export default function App() {
 
             {/* 2. YouTube */}
             <a 
-              href="https://youtube.com/..." 
+              href="https://www.youtube.com/@tuneade_vocalgroup" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group p-8 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-red-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(239,68,68,0.1)] flex items-start space-x-6"
@@ -190,7 +190,7 @@ export default function App() {
 
             {/* 3. Instagram */}
             <a 
-              href="https://instagram.com/..." 
+              href="https://www.instagram.com/tuneade_vocalgroup" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group p-8 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-purple-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(168,85,247,0.1)] flex items-start space-x-6"
@@ -211,7 +211,7 @@ export default function App() {
 
             {/* 4. Patron (Support) */}
             <a 
-              href="https://link-to-your-patron-or-bank-page..." 
+              href="https://qr.kakaopay.com/FSxAVi5XY" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group p-8 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-pink-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(236,72,153,0.1)] flex items-start space-x-6"
