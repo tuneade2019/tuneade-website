@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Menu, X, Youtube, Instagram, ExternalLink, 
-  Heart, Mail, FileText, ChevronDown, Music 
+import {
+  Menu, X, Youtube, Instagram, ExternalLink,
+  Heart, Mail, FileText, ChevronDown, Music, Users
 } from 'lucide-react';
 
 export default function App() {
@@ -19,8 +19,8 @@ export default function App() {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'The Voices', href: '#about' }, // About Us를 감각적으로 변경
-    { name: 'Connect', href: '#connect' }, // Profile, SNS, Patron 모음
+    { name: 'Artists', href: '#artists' },
+    { name: 'Connect', href: '#connect' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -32,14 +32,14 @@ export default function App() {
       }`}>
         <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
           <a href="#home" className="text-2xl font-bold tracking-tighter text-white">
-            Tune<span className="text-indigo-400">Ade</span>
+            Soul De <span className="text-indigo-400">Blanc</span>
           </a>
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
-              <a 
-                key={link.name} 
+              <a
+                key={link.name}
                 href={link.href}
                 className="text-sm font-medium text-neutral-300 hover:text-indigo-400 transition-colors"
               >
@@ -49,7 +49,7 @@ export default function App() {
           </div>
 
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="md:hidden text-neutral-300 hover:text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
@@ -61,8 +61,8 @@ export default function App() {
         {mobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-neutral-900 border-t border-neutral-800 py-4 px-6 flex flex-col space-y-4 shadow-xl">
             {navLinks.map((link) => (
-              <a 
-                key={link.name} 
+              <a
+                key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-lg font-medium text-neutral-300 hover:text-indigo-400 transition-colors"
@@ -79,58 +79,84 @@ export default function App() {
         {/* Abstract Background Elements */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
-        
+
         <div className="relative z-10 text-center px-6">
           <p className="text-indigo-400 font-medium tracking-widest uppercase mb-4 text-sm md:text-base">
-            Acapella Vocal Group
+            Performance Planning & Management
           </p>
           <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-6">
-            Tune<span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">Ade</span>
+            Soul De <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">Blanc</span>
           </h1>
           <p className="text-lg md:text-xl text-neutral-400 max-w-2xl mx-auto mb-10 font-light">
-            목소리로 완성되는 시원상큼한 음악 레시피.<br className="hidden md:block"/>
-            다섯 사람의 울림이 모여 당신의 일상에 스며드는 하모니를 만듭니다.
+            아티스트의 고유한 색채를 무대 위에 투명하게 그려냅니다.<br className="hidden md:block"/>
+            음악과 퍼포먼스로 완성되는 최고의 순간을 기획합니다.
           </p>
-          <a 
-            href="#about" 
+          <a
+            href="#artists"
             className="inline-flex items-center space-x-2 text-neutral-300 hover:text-white transition-colors group"
           >
-            <span className="text-sm font-medium tracking-wide uppercase">Discover More</span>
+            <span className="text-sm font-medium tracking-wide uppercase">Meet Our Artists</span>
             <ChevronDown size={16} className="group-hover:translate-y-1 transition-transform" />
           </a>
         </div>
       </section>
 
-      {/* About Us (The Voices) */}
-      <section id="about" className="py-24 bg-neutral-900">
+      {/* Artists Section */}
+      <section id="artists" className="py-24 bg-neutral-900">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">The Voices of TuneAde</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Artists</h2>
             <div className="w-16 h-1 bg-indigo-500 mx-auto mb-6"></div>
             <p className="text-neutral-400 max-w-2xl mx-auto">
-              소프라노, 알토, 테너, 비트박서, 베이스. <br className="hidden md:block"/>
-              서로 다른 다섯 개의 소리가 만나 튠에이드만의 음악 레시피를 완성합니다.
+              소울 드 블랑과 함께 다채로운 무대를 만들어가는 소속 아티스트를 소개합니다.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-            {/* 멤버 플레이스홀더 */}
-            {[
-              { part: 'Soprano', name: '오승아' },
-              { part: 'Alto', name: '박소연' },
-              { part: 'Tenor', name: '박강민' },
-              { part: 'Beatboxer', name: '온규' },
-              { part: 'Bass', name: '구지원' }
-            ].map((member) => (
-              <div key={member.part} className="flex flex-col items-center group">
-                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-neutral-800 border-2 border-neutral-700 flex items-center justify-center mb-4 overflow-hidden group-hover:border-indigo-400 transition-colors duration-300 relative">
-                  <Music className="text-neutral-600 group-hover:text-indigo-400/50 transition-colors" size={40} />
-                </div>
-                <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
-                <p className="text-sm text-indigo-400 font-medium">{member.part}</p>
+          {/* Artist Card: TuneAde */}
+          <div className="bg-neutral-950 rounded-3xl border border-neutral-800 p-8 md:p-12 hover:border-indigo-500/30 transition-colors duration-500">
+            <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-10 mb-10">
+              <div className="w-32 h-32 bg-neutral-800 rounded-2xl flex items-center justify-center mb-6 md:mb-0 shrink-0">
+                <Users size={48} className="text-indigo-400" />
               </div>
-            ))}
+              <div className="text-center md:text-left flex-1">
+                <div className="inline-block px-3 py-1 bg-indigo-500/10 text-indigo-400 text-xs font-bold uppercase tracking-wider rounded-full mb-3">
+                  Acapella Vocal Group
+                </div>
+                <h3 className="text-3xl font-bold text-white mb-3">TuneAde <span className="text-xl font-medium text-neutral-500 ml-2">튠에이드</span></h3>
+                <p className="text-neutral-400 leading-relaxed">
+                  목소리로 완성되는 시원상큼한 음악 레시피. 서로 다른 다섯 개의 소리가 만나 튠에이드만의 유니크하고 감각적인 하모니를 빚어냅니다.
+                </p>
+              </div>
+            </div>
+
+            {/* TuneAde Members */}
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6 pt-8 border-t border-neutral-800">
+              {[
+                { part: 'Soprano', name: '오승아' , photo: '/members/oh-seung-ah.jpg'},
+                { part: 'Alto', name: '박소연', photo: '/members/park-soyeon.jpg'},
+                { part: 'Tenor', name: '박강민' , photo: '/members/park-gangmin.jpg', photo: '/members/park-gangmin.jpeg'},
+                { part: 'Beatboxer', name: '온규' , photo: '/members/owngyu.jpeg'},
+                { part: 'Bass', name: '구지원', photo: '/members/gu-jiwon.jpeg' }
+              ].map((member) => (
+                <div key={member.part} className="flex flex-col items-center group">
+                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-neutral-900 border border-neutral-700 overflow-hidden flex items-center justify-center mb-3 group-hover:border-indigo-400 transition-colors duration-300">
+                    {member.photo ? (
+                      <img
+                        src={member.photo}
+                        alt={`${member.name} 프로필`}
+                        className="w-full h-full object-cover object-center"
+                      />
+                    ) : (
+                      <Music className="text-neutral-600 group-hover:text-indigo-400/50 transition-colors" size={24} />
+                    )}
+                  </div>
+                  <h4 className="text-base font-bold text-white">{member.name}</h4>
+                  <p className="text-xs text-indigo-400 font-medium">{member.part}</p>
+                </div>
+              ))}
+            </div>
           </div>
+
         </div>
       </section>
 
@@ -141,15 +167,15 @@ export default function App() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Connect with Us</h2>
             <div className="w-16 h-1 bg-purple-500 mx-auto mb-6"></div>
             <p className="text-neutral-400">
-              튠에이드의 더 많은 이야기와 음악을 만나보세요. 여러분의 응원이 큰 힘이 됩니다.
+              소울 드 블랑과 아티스트들의 음악과 더 많은 이야기를 만나보세요.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {/* 1. Profile (Google Drive) */}
-            <a 
-              href="https://drive.google.com/file/d/1RHlax0x-DnyY7_qYAYyGYpnCQJyxcxCB/view?usp=drivesdk" 
-              target="_blank" 
+            <a
+              href="https://drive.google.com/file/d/1RHlax0x-DnyY7_qYAYyGYpnCQJyxcxCB/view?usp=drivesdk"
+              target="_blank"
               rel="noopener noreferrer"
               className="group p-8 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-indigo-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(99,102,241,0.1)] flex items-start space-x-6"
             >
@@ -162,15 +188,15 @@ export default function App() {
                   <ExternalLink size={16} className="text-neutral-500 group-hover:text-indigo-400" />
                 </div>
                 <p className="text-sm text-neutral-400">
-                  튠에이드의 공식 프레스킷과 포트폴리오를 확인하세요. (Google Drive)
+                  기획사 및 소속 아티스트의 포트폴리오를 확인하세요.
                 </p>
               </div>
             </a>
 
             {/* 2. YouTube */}
-            <a 
-              href="https://www.youtube.com/@tuneade_vocalgroup" 
-              target="_blank" 
+            <a
+              href="https://www.youtube.com/@tuneade_vocalgroup"
+              target="_blank"
               rel="noopener noreferrer"
               className="group p-8 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-red-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(239,68,68,0.1)] flex items-start space-x-6"
             >
@@ -183,15 +209,15 @@ export default function App() {
                   <ExternalLink size={16} className="text-neutral-500 group-hover:text-red-400" />
                 </div>
                 <p className="text-sm text-neutral-400">
-                  커버 곡, 라이브 무대, 브이로그 등 다양한 영상 콘텐츠를 감상하세요.
+                  커버 곡, 라이브 무대, 기획 영상 등 다양한 콘텐츠를 감상하세요.
                 </p>
               </div>
             </a>
 
             {/* 3. Instagram */}
-            <a 
-              href="https://www.instagram.com/tuneade_vocalgroup" 
-              target="_blank" 
+            <a
+              href="https://www.instagram.com/tuneade_vocalgroup"
+              target="_blank"
               rel="noopener noreferrer"
               className="group p-8 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-purple-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(168,85,247,0.1)] flex items-start space-x-6"
             >
@@ -204,15 +230,15 @@ export default function App() {
                   <ExternalLink size={16} className="text-neutral-500 group-hover:text-purple-400" />
                 </div>
                 <p className="text-sm text-neutral-400">
-                  멤버들의 일상과 최신 공연 소식을 가장 빠르게 만나보실 수 있습니다.
+                  소속 아티스트들의 활동 소식과 비하인드를 가장 빠르게 만나보실 수 있습니다.
                 </p>
               </div>
             </a>
 
             {/* 4. Patron (Support) */}
-            <a 
-              href="https://qr.kakaopay.com/FSxAVi5XY" 
-              target="_blank" 
+            <a
+              href="https://qr.kakaopay.com/FSxAVi5XY"
+              target="_blank"
               rel="noopener noreferrer"
               className="group p-8 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-pink-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(236,72,153,0.1)] flex items-start space-x-6"
             >
@@ -225,7 +251,7 @@ export default function App() {
                   <ExternalLink size={16} className="text-neutral-500 group-hover:text-pink-400" />
                 </div>
                 <p className="text-sm text-neutral-400">
-                  튠에이드의 음악 활동을 후원해주세요. 더 좋은 음악으로 보답하겠습니다.
+                  아티스트들의 창작 활동을 후원해주세요. 더 멋진 무대로 보답해드리겠습니다.
                 </p>
               </div>
             </a>
@@ -239,15 +265,15 @@ export default function App() {
           <Mail className="mx-auto text-indigo-400 mb-6" size={48} />
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Contact Us</h2>
           <p className="text-neutral-400 mb-10">
-            공연 섭외 및 기타 문의 사항은 아래 이메일로 연락 주시면 빠르게 답변해 드리겠습니다.
+            소속 아티스트 공연 섭외, 기획 및 기타 문의 사항은 아래 이메일로 연락 주시면 빠르게 답변해 드리겠습니다.
           </p>
-          
+
           <div className="inline-flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 bg-neutral-950 p-2 pl-6 rounded-full border border-neutral-800">
             <span className="text-lg font-medium text-neutral-300">
               tuneade2019@gmail.com
             </span>
-            <a 
-              href="mailto:tuneade2019@gmail.com" 
+            <a
+              href="mailto:tuneade2019@gmail.com"
               className="w-full sm:w-auto px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-full font-medium transition-colors"
             >
               메일 보내기
@@ -259,10 +285,9 @@ export default function App() {
       {/* Footer */}
       <footer className="py-8 bg-neutral-950 border-t border-neutral-900 text-center">
         <p className="text-neutral-500 text-sm">
-          © {new Date().getFullYear()} TuneAde A Cappella Group. All rights reserved.
+          © {new Date().getFullYear()} Soul De Blanc. All rights reserved.
         </p>
       </footer>
     </div>
   );
 }
-
