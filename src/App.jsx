@@ -176,7 +176,7 @@ export default function App() {
           <div className="grid md:grid-cols-2 gap-6">
             {/* 1. Profile (Google Drive) */}
             <a
-              href="https://drive.google.com/file/d/1RHlax0x-DnyY7_qYAYyGYpnCQJyxcxCB/view?usp=drivesdk"
+              href="https://drive.google.com/file/d/1A7ZemgFsHvWz4fDJyoal2yL4cFedUXtL/view?usp=drivesdk"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-8 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-indigo-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(99,102,241,0.1)] flex items-start space-x-6"
