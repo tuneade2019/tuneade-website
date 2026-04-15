@@ -135,7 +135,7 @@ export default function App() {
               {[
                 { part: 'Soprano', name: '오승아' , photo: '/members/oh-seung-ah.jpg'},
                 { part: 'Alto', name: '박소연', photo: '/members/park-soyeon.jpg'},
-                { part: 'Tenor', name: '박강민', photo: '/members/park-gangmin.jpeg'},
+                { part: 'Tenor', name: '한울', photo: '/members/han-wool.jpeg'},
                 { part: 'Beatboxer', name: '온규' , photo: '/members/owngyu.jpeg'},
                 { part: 'Bass', name: '구지원', photo: '/members/gu-jiwon.jpeg' }
               ].map((member) => (
