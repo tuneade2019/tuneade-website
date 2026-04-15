@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   Menu, X, Youtube, Instagram, ExternalLink,
-  Heart, Mail, FileText, ChevronDown, Music, Users
+  Heart, Mail, FileText, ChevronDown, Music
 } from 'lucide-react';
 
 export default function App() {
@@ -113,12 +113,14 @@ export default function App() {
           </div>
 
           {/* Artist Card: TuneAde */}
-          <div className="bg-neutral-950 rounded-3xl border border-neutral-800 p-8 md:p-12 hover:border-indigo-500/30 transition-colors duration-500">
-            <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-10 mb-10">
-              <div className="w-32 h-32 bg-neutral-800 rounded-2xl flex items-center justify-center mb-6 md:mb-0 shrink-0">
-                <Users size={48} className="text-indigo-400" />
-              </div>
-              <div className="text-center md:text-left flex-1">
+          <div className="bg-neutral-950 rounded-3xl border border-neutral-800 overflow-hidden hover:border-indigo-500/30 transition-colors duration-500">
+            <img
+              src="/members/team1.jpeg"
+              alt="튠에이드 팀 단체 사진"
+              className="w-full max-h-[min(52vw,420px)] md:max-h-[460px] object-cover object-[center_22%] bg-white"
+            />
+            <div className="p-8 md:p-12">
+              <div className="text-center md:text-left mb-10">
                 <div className="inline-block px-3 py-1 bg-indigo-500/10 text-indigo-400 text-xs font-bold uppercase tracking-wider rounded-full mb-3">
                   Acapella Vocal Group
                 </div>
@@ -127,14 +129,13 @@ export default function App() {
                   목소리로 완성되는 시원상큼한 음악 레시피. 서로 다른 다섯 개의 소리가 만나 튠에이드만의 유니크하고 감각적인 하모니를 빚어냅니다.
                 </p>
               </div>
-            </div>
 
             {/* TuneAde Members */}
             <div className="grid grid-cols-2 md:grid-cols-5 gap-6 pt-8 border-t border-neutral-800">
               {[
                 { part: 'Soprano', name: '오승아' , photo: '/members/oh-seung-ah.jpg'},
                 { part: 'Alto', name: '박소연', photo: '/members/park-soyeon.jpg'},
-                { part: 'Tenor', name: '박강민' , photo: '/members/park-gangmin.jpg', photo: '/members/park-gangmin.jpeg'},
+                { part: 'Tenor', name: '박강민', photo: '/members/park-gangmin.jpeg'},
                 { part: 'Beatboxer', name: '온규' , photo: '/members/owngyu.jpeg'},
                 { part: 'Bass', name: '구지원', photo: '/members/gu-jiwon.jpeg' }
               ].map((member) => (
@@ -154,6 +155,7 @@ export default function App() {
                   <p className="text-xs text-indigo-400 font-medium">{member.part}</p>
                 </div>
               ))}
+            </div>
             </div>
           </div>
 
