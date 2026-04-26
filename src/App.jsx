@@ -257,6 +257,27 @@ export default function App() {
                 </p>
               </div>
             </a>
+
+            {/* 5. Naver Profile */}
+            <a
+              href="https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=%ED%8A%A0%EC%97%90%EC%9D%B4%EB%93%9C"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group p-8 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-green-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,197,94,0.1)] flex items-start space-x-6"
+            >
+              <div className="p-4 bg-green-500/10 rounded-xl text-green-400 group-hover:bg-green-500 group-hover:text-white transition-colors">
+                <ExternalLink size={32} />
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-xl font-bold">Naver Profile</h3>
+                  <ExternalLink size={16} className="text-neutral-500 group-hover:text-green-400" />
+                </div>
+                <p className="text-sm text-neutral-400">
+                  네이버 인물 프로필에서 튠에이드의 최신 활동과 대표 정보를 확인해보세요.
+                </p>
+              </div>
+            </a>
           </div>
         </div>
       </section>
