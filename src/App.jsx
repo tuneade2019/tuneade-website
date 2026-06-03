@@ -218,7 +218,7 @@ export default function App() {
 
             {/* 3. Instagram */}
             <a
-              href="https://www.instagram.com/tuneade_vocalgroup"
+              href="https://www.instagram.com/tune_ade_"
               target="_blank"
               rel="noopener noreferrer"
               className="group p-8 rounded-2xl bg-neutral-900 border border-neutral-800 hover:border-purple-500/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(168,85,247,0.1)] flex items-start space-x-6"
